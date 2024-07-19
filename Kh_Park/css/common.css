@@ -238,9 +238,45 @@ footer{
     }
     
     /* 푸터 */
-    .f_txt_box{
-        padding-bottom: 90px;
-    }
+        /* 푸터 */
+        .footer{
+            background-color: rgb(249, 248, 248);
+            margin-top: 50px;
+        }
+        .f_top_inner{
+            margin: auto;
+            margin-top: 10px;
+            max-width: 300px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 400;
+        }
+        .f_top{
+            border-bottom: none;
+        }
+        .f_top a{
+            padding: 0px 0px;
+        }
+        .f_txt_box{
+            margin:auto;
+            margin-top: 15px;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 80px;
+        }
+        .f_txt_outer{
+            height: 19px;
+            overflow: hidden;
+            transition: all 0.3s;
+            align-items: center;
+        }
+        div .f_txt_outer:nth-child(2){
+            margin: 5px;
+        }
+        .drop{
+            display: block;
+        }
 }
 @media screen and (max-width:768px) {
     /* 헤더 */
@@ -253,45 +289,7 @@ footer{
         font-weight: 600;
         padding: 2px 0px;
     }
-    /* 푸터 */
-    .footer{
-        background-color: rgb(249, 248, 248);
-        margin-top: 50px;
-    }
-    .f_top_inner{
-        margin: auto;
-        margin-top: 10px;
-        max-width: 300px;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        font-weight: 400;
-    }
-    .f_top{
-        border-bottom: none;
-    }
-    .f_top a{
-        padding: 0px 0px;
-    }
-    .f_txt_box{
-        margin:auto;
-        margin-top: 15px;
-        flex-direction: column;
-        align-items: center;
-        padding-bottom: 80px;
-    }
-    .f_txt_outer{
-        height: 19px;
-        overflow: hidden;
-        transition: all 0.3s;
-        align-items: center;
-    }
-    div .f_txt_outer:nth-child(2){
-        margin: 5px;
-    }
-    .drop{
-        display: block;
-    }
+
 }
 @media screen and (max-width:480px) {
     .h_search_box{

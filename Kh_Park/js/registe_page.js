@@ -16,8 +16,8 @@ register_btn.addEventListener("click",function(e){
     // 아이디 검사
     if(condition){
         // 길이 지정
-        if(user_info_input[0].value.length < 6 || user_info_input[0].value.length > 20){
-            error_message[0].textContent = "6자리 이상 20자리 이하로 입력하시오"
+        if(user_info_input[0].value.length < 6 || user_info_input[0].value.length > 16){
+            error_message[0].textContent = "6자리 이상 16자리 이하로 입력하시오"
             user_info_input[0].focus()
             e.preventDefault()
             condition = false

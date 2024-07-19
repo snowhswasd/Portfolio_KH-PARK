@@ -469,6 +469,9 @@ div .kh_btn_L{
 object{
     pointer-events:none;
 }
+.drop{
+    display: none;
+}
 
 
 
@@ -639,7 +642,9 @@ object{
     .review_txt_inner span:nth-child(3){
         -webkit-line-clamp: 4; 
     }
-    
+    .drop{
+        display: block;
+    }
 }
 @media screen and (max-width:480px) {
     /* 카테고리 아이콘 크기 */
@@ -650,6 +655,10 @@ object{
     .sec_1_top a {
         line-height: 15px;
         padding-bottom: 3px;
+    }
+    .sec_1_top a img {
+        width: 29px;
+        height: 29px;
     }
     /* 메인 padding */
     .main{
