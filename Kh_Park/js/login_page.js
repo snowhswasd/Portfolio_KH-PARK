@@ -22,10 +22,12 @@ for(let i=0; i<drop.length; i++){
 
 // 팝업 3개
 let popup = document.getElementsByClassName("popup")
+
 // 닫기 버튼 3개
 let close_btn = document.getElementsByClassName("close_btn")
 let open_btn = document.getElementsByClassName("open_btn")
 let block_pan = document.getElementsByClassName("block_pan")[0]
+
 for(let i=0; i<open_btn.length; i++){
     open_btn[i].addEventListener("click", function(){
         popup[i].style.display = "block"

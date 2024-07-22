@@ -1,0 +1,122 @@
+.main{
+    width: 100%;
+    border-top: 1px solid black;
+}
+.sec_1{
+    max-width: 1280px;
+    margin: auto;
+    border: 1px solid black;
+}
+.musical_info{
+    display: flex;
+}
+.musical_title{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.musical_img{
+    width: 300px;
+    height: 400px;
+    background: url(../img/musical/musical_1.gif) no-repeat center center / cover;
+}
+.musical_txt_box{
+    width: 30%;
+    border: 1px solid black;
+}
+.musical_txt{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.musical_price_box{
+    display: flex;
+}
+.txt_title{
+    font-size: 18px;
+    width: 75px;
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 15px;
+}
+.txt_sub{
+    font-size: 15px;
+    font-weight: 600;
+}
+.price_num{
+    font-weight: 600;
+}
+.right_info_box{
+    float: right;
+    width: 30%;
+    background-color: antiquewhite;
+}
+
+.sec_2{
+    max-width: 1280px;
+    margin: auto;
+    border: 1px solid black;
+}
+
+
+.sit_box{
+    border: 1px solid black;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.sit_box:hover{
+    cursor: pointer;
+}
+.sit{
+    display: none;
+}
+.sit_line{
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.label{
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+}
+.sit_class{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 600;
+}
+.VIP_color{
+    background-color: red;
+}
+.R_color{
+    background-color: green;
+}
+.S_color{
+    background-color: blue;
+}
+.A_color{
+    background-color: yellow;
+}
+
+/* 날짜 시간 */
+.show_time_input{
+    /* display: none; */
+}
+.time_title{
+    border: 1px solid black;
+    display: inline-block;
+    padding: 2px 5px;
+    font-weight: 600;
+}

@@ -105,7 +105,7 @@ var rank_swiper1 = new Swiper(".rank1", {
             slidesPerView: 2, 
             spaceBetween: 10, 
         },
-      },
+    },
 });
 var rank_swiper2 = new Swiper(".rank2", {
     navigation: {
@@ -230,7 +230,7 @@ for(let i=0; i<swiper_rank.length; i++){
     for(let j=0; j<data_arr.length; j++){
         swiper_rank[i].innerHTML+=`
         <div class="swiper-slide rank_slide pos_box">
-            <a href="#" class="pos_box">
+            <a href="./ticketing_page.html" class="pos_box">
                 <img src="../img/musical/${data_arr[j][0]}" alt="공연정보${j}" class="slide_img">
                 <span class="num_pos num_pos_${j}">${j+1}<span>
             </a>
@@ -273,7 +273,7 @@ let open_ticket = document.getElementsByClassName("open_ticket")[0]
 for(let i=0; i<open_arr.length; i++){
     open_ticket.innerHTML+=`
     <div class="open_ticket_box">
-        <a href="#">
+        <a href="./ticketing_page.html">
             <img src="../img/musical/${open_arr[i][0]}" alt="티켓오픈${i}">
         </a>
         <div class="open_txt">
@@ -543,7 +543,7 @@ for(let i=0; i<keyword_swiper_box.length; i++){
     for(let j=0; j<recommend_data_arr.length; j++){
         swiper_recommend[i].innerHTML += `
         <div class="swiper-slide recommend_slide">
-            <a href="#">
+            <a href="./ticketing_page.html">
                 <img src="../img/recommend/${recommend_data_arr[j][0]}" alt="공연정보${i}" class="slide_img">
             </a>
             <div class="content_txt_box">

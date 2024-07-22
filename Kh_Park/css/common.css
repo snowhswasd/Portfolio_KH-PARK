@@ -36,7 +36,7 @@ header{
     background-color: rgba(0, 0, 0, 0.7);
     top: 0;
     left: 0;
-    z-index: 998;
+    z-index: 500;
     display: none;
 }
 .h_logo{
@@ -237,46 +237,46 @@ footer{
         height: 20px;
     }
     
+
     /* 푸터 */
-        /* 푸터 */
-        .footer{
-            background-color: rgb(249, 248, 248);
-            margin-top: 50px;
-        }
-        .f_top_inner{
-            margin: auto;
-            margin-top: 10px;
-            max-width: 300px;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            font-weight: 400;
-        }
-        .f_top{
-            border-bottom: none;
-        }
-        .f_top a{
-            padding: 0px 0px;
-        }
-        .f_txt_box{
-            margin:auto;
-            margin-top: 15px;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 80px;
-        }
-        .f_txt_outer{
-            height: 19px;
-            overflow: hidden;
-            transition: all 0.3s;
-            align-items: center;
-        }
-        div .f_txt_outer:nth-child(2){
-            margin: 5px;
-        }
-        .drop{
-            display: block;
-        }
+    .footer{
+        background-color: rgb(249, 248, 248);
+        margin-top: 50px;
+    }
+    .f_top_inner{
+        margin: auto;
+        margin-top: 10px;
+        max-width: 300px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 400;
+    }
+    .f_top{
+        border-bottom: none;
+    }
+    .f_top a{
+        padding: 0px 0px;
+    }
+    .f_txt_box{
+        margin:auto;
+        margin-top: 15px;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 80px;
+    }
+    .f_txt_outer{
+        height: 19px;
+        overflow: hidden;
+        transition: all 0.3s;
+        align-items: center;
+    }
+    div .f_txt_outer:nth-child(2){
+        margin: 5px;
+    }
+    .drop{
+        display: block;
+    }
 }
 @media screen and (max-width:768px) {
     /* 헤더 */
@@ -295,6 +295,7 @@ footer{
     .h_search_box{
         margin: 5px 0px;
         height: 30px;
+        width: calc(100% - 88px);
     }
     .search_icon_box {
         margin-top: 6px;

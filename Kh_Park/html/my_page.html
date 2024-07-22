@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>내정보 페이지</title>
 </head>
 <body>
@@ -42,8 +43,179 @@
                     <span>TOP</span>
                 </a>
             </div>
-        </div>
-        <div class="block_pan"></div>
+
+            <!-- 정보수정 -->
+            <div class="popup popup_1">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">정보 수정</p>
+                <!--뭐 변경할지 선택 -->
+                <div class="find_opt_box">
+                    <div class="find_opt">아이디 변경</div>
+                    <div class="find_opt">비밀번호 변경</div>
+                    <div class="find_opt">전화번호 변경</div>
+                    <div class="find_opt">문제 정답 변경</div>
+                    <div class="popup_btn_box">
+                        <button class="close_btn close_popup_update">닫기</button>
+                    </div>
+                </div>
+                <!-- 아이디 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 현재 아이디 입력 -->
+                        <span>현재 아이디</span>
+                        <input type="text" placeholder="현재 아이디를 입력" class="orign_input">
+                        <span class="error_msg"></span>
+                        <!-- 변경할 아이디 입력 -->
+                        <span>변경할 아이디</span>
+                        <input type="text" placeholder="변경할 아이디를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼 박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 비번 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 현재 비밀번호 입력 -->
+                        <span>현재 비밀번호</span>
+                        <input type="password" placeholder="현재 비밀번호를 입력" class="orign_input">
+                        <span class="error_msg"></span>
+                        <!-- 변경할 비밀번호 입력 -->
+                        <span>변경할 비밀번호</span>
+                        <input type="password" placeholder="변경할 비밀번호를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 비밀번호 확인 -->
+                        <input type="password" placeholder="비밀번호를 한번 더 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼 박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 전화번호 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 전화번호 입력 -->
+                        <span>전화번호</span>
+                        <input type="text" placeholder="변경할 전화번호를 입력" class="update_input">
+                        <span class="error_msg"></span>
+                        <!-- 버튼박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>
+                <!-- 문제 답 변경 -->
+                <form class="update_box_outer" action="#" method="post">
+                    <div class="update_box">
+                        <!-- 질문 정답 입력 -->
+                        <span>질문: 초등학생 때 장래희망은?</span>
+                        <input type="text" placeholder="변경할 정답을 입력" class="update_input">
+                        
+                        <span class="error_msg"></span>
+                        <!-- 버튼박스 -->
+                        <div class="popup_btn_box">
+                            <input type="submit" class="update_btn" value="변경하기">
+                            <input type="reset" class="prev_btn_update" value="이전으로">
+                            <input type="reset" class="off_close_btn" value="닫기">
+                        </div>
+                    </div>
+                </form>    
+            </div> 
+            <!-- 포인트충전 -->
+            <form class="popup popup_2" action="#" method="#">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">포인트 충전</p>
+                <div class="point_input_box">
+                    <input type="text" class="point_input" readonly value="0">
+                    <span class="point_input_txt">P</span>
+                </div>
+                <div class="point_increment_btn_box">
+                    <div class="add_btn">+ 1만원</div>
+                    <div class="add_btn">+ 3만원</div>
+                    <div class="add_btn">+ 5만원</div>
+                    <div class="add_btn">+ 10만원</div>
+                </div>
+                <div class="popup_btn_box">
+                    <input type="submit" class="submit_btn point_btn" value="충전하기">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </form>
+            <!-- 예매내역 -->
+            <div class="popup popup_3">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">예매 내역</p>
+                <div class="ticket_area">
+                </div>
+                <div class="popup_btn_box">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </div>
+            <!-- 후기작성 -->
+            <form class="popup popup_4 asd" action="#" method="#">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">후기작성</p>
+                <div class="review_box ">                    
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        </div>
+                    </div>                    
+                    <div class="popup_btn_box">
+                        <input type="reset" class="close_btn" value="닫기">
+                    </div>
+                </div>
+            </form>
+            <!-- 임시팝업 -->
+            <div class="popup popup_5">
+                <h1>임시</h1>
+                <div class="popup_btn_box">
+                    <input type="reset" class="close_btn" value="닫기">
+                </div>
+            </div>
+            <!-- 회원 탈퇴 -->
+            <div class="popup popup_6">
+                <a href="./index.html" class="popup_logo">
+                    <span>KH-</span>
+                    <span>PARK</span>
+                </a>
+                <p class="popup_title">회원탈퇴</p>
+                <div class="confirm_txt_box">
+                        <span>회원탈퇴를 원하시면</span>
+                        <span>"회원탈퇴에 동의합니다"</span>
+                        <span>입력해주세요</span>
+                </div>
+                <div class="confirm_btn_box">
+                    <div class="confirm_input_box">
+                        <input type="text" placeholder="회원 탈퇴에 동의합니다" class="delete_confirm_input">
+                    </div>
+                    <div class="popup_btn_box">
+                        <div class="delete_btn">탈퇴하기</div>
+                        <div class="close_btn">닫기</div>
+                    </div>
+                </div>
+            </div>
+            <div class="block_pan"></div>
     </header>
     <main class="main">
         <section class="sec">
@@ -92,74 +264,6 @@
             </div>
         </section>
     </main>
-    <div class="popup">
-        <a href="./index.html" class="popup_logo">
-            <span>KH-</span>
-            <span>PARK</span>
-        </a>
-        <p class="popup_title">정보 수정</p>
-        <div class="popup_btn_box">
-            <button class="update_btn">수정하기</button>
-            <button class="close_btn">닫기</button>
-        </div>
-    </div>
-    <div class="popup">
-        <a href="./index.html" class="popup_logo">
-            <span>KH-</span>
-            <span>PARK</span>
-        </a>
-        <p class="popup_title">포인트 충전</p>
-        <div class="point_input_box">
-            <input type="text" class="point_input" readonly value="0">
-            <span class="point_input_txt">P</span>
-        </div>
-        <div class="point_increment_btn_box">
-            <button class="add_btn">+ 1만원</button>
-            <button class="add_btn">+ 3만원</button>
-            <button class="add_btn">+ 5만원</button>
-            <button class="add_btn">+ 10만원</button>
-        </div>
-
-        <div class="popup_btn_box">
-            <button class="point_decide_btn">충전하기</button>
-            <button class="close_btn">닫기</button>
-        </div>
-    </div>
-    <div class="popup">
-        <a href="./index.html" class="popup_logo">
-            <span>KH-</span>
-            <span>PARK</span>
-        </a>
-        <p class="popup_title">예매 내역</p>
-    </div>
-    <div class="popup">
-        <a href="./index.html" class="popup_logo">
-            <span>KH-</span>
-            <span>PARK</span>
-        </a>
-        <p class="popup_title">후기작성</p>
-    </div>
-    <div class="popup">
-        <a href="./index.html" class="popup_logo">
-            <span>KH-</span>
-            <span>PARK</span>
-        </a>
-        <p class="popup_title">회원탈퇴</p>
-        <div class="confirm_txt_box">
-                <span>회원탈퇴를 원하시면</span>
-                <span>"회원탈퇴에 동의합니다"</span>
-                <span>입력해주세요</span>
-        </div>
-        <div class="confirm_btn_box">
-            <div class="confirm_input_box">
-                <input type="text" placeholder="회원 탈퇴에 동의합니다" class="delete_confirm_input">
-            </div>
-            <div class="popup_btn_box">
-                <button class="delete_btn">탈퇴하기</button>
-                <button class="close_btn">닫기</button>
-            </div>
-        </div>
-    </div>
     <footer class="footer">
         <div class="f_top">
             <div class="f_top_inner">
@@ -205,6 +309,7 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="../js/common.js"></script>
     <script src="../js/my_page.js"></script>
 </body>

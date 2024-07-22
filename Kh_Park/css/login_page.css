@@ -55,7 +55,7 @@ a{
     height: 100%;
     box-sizing: border-box;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 2px solid rgb(72, 91, 166);
     padding: 9px 0px 7px 8px;
     font-size: 13px;
     font-weight: 600;
@@ -259,7 +259,7 @@ input[type="submit"]:hover{
     font-size: 14px;
     font-weight: 600;
 }
-button:hover{
+.help_box .open_btn:hover{
     cursor: pointer;
 }
 /* 로그인 아이콘 박스 */

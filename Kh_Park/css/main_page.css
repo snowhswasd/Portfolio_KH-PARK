@@ -11,7 +11,8 @@
     justify-content: space-between;
     gap: 30px;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 600;
+    padding-bottom: 10px;
 }
 .sec_1_top a{
     line-height: 30px;

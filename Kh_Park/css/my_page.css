@@ -128,13 +128,17 @@ footer{
 
 /* 팝업 공통 */
 .popup{
-    width: 400px;
-    height: 500px;
     box-sizing: border-box;
     padding:10px;
     border: 3px solid rgb(72, 91, 166);
-    background-color: white;
+    background: white;
     border-radius: 10px;
+    display: none;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 600;
 }
 .popup_logo_box{
     text-align: center;
@@ -162,7 +166,21 @@ footer{
     margin: auto;
     margin-top: 20px;
 }
-.popup_btn_box button{
+.popup_btn_box input:nth-child(1){
+    margin-bottom: 5px;
+}
+.popup_btn_box button:active{
+    border: 1px solid black;
+}
+.update_box{
+    display: none;
+}
+.prev_btn_update,
+.update_btn,
+.close_btn,
+.off_close_btn,
+.submit_btn,
+.delete_btn{
     display: block;
     width: 100%;
     height: 35px;
@@ -171,14 +189,86 @@ footer{
     border: none;
     border-radius: 10px;
 }
-.popup_btn_box button:hover{
+.popup_btn_box button:hover,
+.update_btn:hover,
+.prev_btn_update:hover,
+.delete_btn:hover,
+.close_btn:hover,
+.off_close_btn:hover,
+.point_btn:hover,
+.add_btn:hover{
     cursor: pointer;
 }
-.popup_btn_box button:nth-child(1){
+.popup_1,
+.popup_2,
+.popup_3,
+.popup_4,
+.popup_5,
+.popup_6{
+    width: 400px;
+}
+
+
+
+/* 정보수정 */
+.find_opt{
+    margin: auto;
+    width: 200px;
+    margin-bottom: 7px;
+    height: 50px;
+    border: 3px solid rgb(72, 91, 166);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-weight: 600;
+    text-align: center;
+    line-height: 44px;
+}
+.find_opt:hover{
+    cursor: pointer;
+    background-color: rgba(135, 206, 235,0.1);
+}
+.update_box_outer{
+    display: none;
+}
+.update_box{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 5px;
+}
+.update_input,
+.orign_input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: 2px solid rgb(72, 91, 166);
+    outline: none;
+    padding: 0px 3px;
     margin-bottom: 5px;
 }
-.popup_btn_box button:active{
-    border: 1px solid black;
+.prev_btn_update{
+    margin: 5px 0px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
+}
+.popup_btn_box .close_popup_update{
+    margin: auto;
+    width: 100%;
+}
+
+.update_box span{
+    font-weight: 600;
+}
+.update_box .error_msg,
+.input_error_msg,
+.textarea_error_msg{
+    color: red;
+    text-align: center;
 }
 
 /* 포인트 충전 팝업 */
@@ -215,16 +305,217 @@ footer{
     justify-content: space-between;
     margin-top: 5px;
     height: 25px;
+    font-size: 15px;
 }
-.point_increment_btn_box button{
+.point_increment_btn_box div{
     height: 100%;
     background-color: rgb(72, 91, 166);
     color: white;
     border: none;
+    line-height: 25px;
+    padding: 0px 3px;
 }
 .point_increment_btn_box :active{
     background-color: rgba(72, 91, 166, 0.9);
 }
+/* 예매내역 팝업 */
+.ticket_area{
+    margin: auto;
+    width: 370px;
+    height: 300px;
+    box-sizing: border-box;
+    padding-right: 5px;
+    overflow-y: scroll;
+}
+.ticket_price_box{
+    display: inline-block;
+}
+
+.ticket_box{
+    display: flex;
+    margin-bottom: 5px;
+    gap: 10px;
+    border: 2px solid rgb(72, 91, 166);
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.ticket_txt_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+.ticket_txt_box span{
+    font-size: 15px;
+    font-weight: 600;
+}
+.ticket_area::-webkit-scrollbar, 
+textarea::-webkit-scrollbar{
+    width: 10px; 
+    height: 20px;
+}
+.ticket_area::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+    height: 30%; 
+    background: rgb(72, 91, 166);
+    
+    border-radius: 10px;
+}
+.ticket_area::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track{
+    background: rgba(72, 91, 166, 0.1); 
+}
+.ticket_img{
+    width: 80px;
+    height: 120px;
+}
+
+
+/* 후기작성 팝업 */
+.swiper {
+    width: 240px;
+}
+.swiper-slide {
+    text-align: center;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+
+    border: 2px solid rgb(72, 91, 166);
+    box-sizing: border-box;
+}
+div .swiper-pagination{
+    position: absolute;
+    top: -21px;
+    left: 0;
+    font-size: 13px;
+    font-weight: 600;
+}
+.swiper_btn{
+    display: none;
+}
+.poster_img_box{
+    margin: auto;
+    margin-top: 10px;
+    width: 150px;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+} 
+.poster_img_box img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.img_title{
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.review_txt_box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.review_box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    position: relative;
+}
+.review_content,
+.review_title{
+    width: 200px;
+    border: 2px solid rgb(72, 91, 166);
+    outline: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px;
+}
+textarea{
+    resize: none;
+    height: 50px;
+}
+
+.box_title{
+    margin: 0;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.score_box{
+    width: 150px;
+    height: 30px;
+    position: relative;
+}
+.star_box_outer{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+}
+.star_box{
+    position: relative;
+    width: calc(100% /5);
+    height: 100%;
+}
+input[type="range"]{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 20;
+    opacity: 1;
+}
+.full_star,
+.zero_star{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../img/full_star.png) no-repeat center center / cover;
+}
+.full_star{
+    display: none;
+}
+.first_score{
+    display: block;
+}
+.zero_star{
+    background: url(../img/zero_star.png) no-repeat center center / cover;
+}
+.review_submit_btn{
+    margin-bottom: 5px;
+    width: 210px;
+    height: 35px;
+    background-color: rgb(72, 91, 166);
+    border-radius: 10px;
+    font-size: 13px;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+
+
 
 /* 회원탈퇴 팝업 */
 .confirm_txt_box{
@@ -257,8 +548,17 @@ footer{
     text-align: center;
     outline: none;
 }
+.close_btn{
+    line-height: 35px;
+    font-size: 13px;
+    text-align: center;
+}
 div .delete_btn{
+    text-align: center;
+    line-height: 35px;
+    font-size: 13px;
     background-color: gray;
+    margin-bottom: 5px;
 }
 
 @media screen and (max-width:1024px) {
@@ -307,5 +607,40 @@ div .delete_btn{
 }
 
 @media screen and (max-width:480px) {
-
+    /* 팝업창 공통*/
+    .popup_1,
+    .popup_2,
+    .popup_3,
+    .popup_4,
+    .popup_5,
+    .popup_6{
+        width: 260px;
+    }
+    .error_msg,
+    .input_error_msg,
+    .textarea_error_msg{
+        font-size: 13px;
+    }
+    /* 정보수정 팝업 */
+    .popup_btn_box .close_popup_update{
+        width: 100%;
+    }
+    /* 포인트 충전 팝업 */
+    .point_increment_btn_box{
+        gap: 1px;
+    }
+    .add_btn{
+        font-size: 13px;
+    }
+    /* 예매내역 팝업 */
+    .ticket_area{
+        width: 100%;
+    }
+    .ticket_txt_box span{
+        font-size: 12px;
+    }
+    /* 후기 팝업 */
+    .popup_4{
+        padding: 5px;
+    }
 }
