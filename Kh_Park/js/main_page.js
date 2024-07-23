@@ -532,7 +532,7 @@ breakpoints: {
         spaceBetween: 10, 
     },
     },
-});
+    });
 
 // 추천 키워드 스와이퍼 내용 넣어주기 
 let swiper_recommend = document.getElementsByClassName("swiper_recommend")
@@ -569,3 +569,88 @@ for(let i=0; i<keyword_opt.length; i++){
         keyword_opt[i].style.border= "1px solid #8e43e7"
     })
 }
+
+
+
+// 리뷰 넣어주기
+let reivew_arr =[
+["keyword_3.gif","유진과 유진","이 공연 진짜 재밌습니다~!!!",
+"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti modi minima repudiandae. Eligendi sapiente totam debitis numquam, quia neque repellendus deleniti repellat. Id animi, assumenda magni officiis neque labore doloremque?",
+"딸기맛 딸기우유",
+"4.8"],
+
+["keyword_4.gif","시데레우스","친구들과 같이 보기 좋아요!",
+"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti modi minima repudiandae. Eligendi sapiente totam debitis numquam, quia neque repellendus deleniti repellat. Id animi, assumenda magni officiis neque labore doloremque?",
+"바나나맛 바나나우유",
+"5.0"],
+
+["keyword_7.gif","미오 프라텔로","마지막 결말이 너무 충격이에요...!!",
+"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti modi minima repudiandae. Eligendi sapiente totam debitis numquam, quia neque repellendus deleniti repellat. Id animi, assumenda magni officiis neque labore doloremque?",
+"초코맛 초코우유",
+"4.9"],
+
+["keyword_2.gif","접번","시대를 앞서간 공연 입니다...",
+"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti modi minima repudiandae. Eligendi sapiente totam debitis numquam, quia neque repellendus deleniti repellat. Id animi, assumenda magni officiis neque labore doloremque?",
+"우유맛 우유우유",
+"5.0"],
+]
+
+let review_box_outer = document.getElementsByClassName("review_box_outer")[0]
+
+for(let i=0; i<reivew_arr.length; i++){
+    review_box_outer.innerHTML +=`
+        <div class="review_box" data-idx="${i}">
+            <div class="review_inner">
+                <div class="review_img_box">
+                    <img src="../img/recommend/${reivew_arr[i][0]}" alt="리뷰포스터">
+                </div>
+                <div class="review_txt_box">
+                    <div class="review_txt_inner">
+                        <span>${reivew_arr[i][1]}</span>
+                        <span>${reivew_arr[i][2]}</span>
+                        <span>${reivew_arr[i][3]}</span>
+                    </div>
+                    <div class="user_info">
+                        <div class="user_box">
+                            <div class="user_img"></div>
+                            <span>${reivew_arr[i][4]}</span>
+                        </div>
+                        <div class="star_box">
+                            <div class="star"></div>
+                            <span class="star_score">${reivew_arr[i][5]}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`
+}
+
+let review_box = document.getElementsByClassName("review_box")
+let review_popup = document.getElementsByClassName("review_popup")[0]
+let pop_close_btn = document.getElementsByClassName("pop_close_btn")[0]
+let block_pan = document.getElementsByClassName("block_pan")[0]
+let put_value = document.getElementsByClassName("put_value")
+let pop_img_box = document.getElementsByClassName("pop_img_box")[0]
+
+for(let i=0; i<review_box.length; i++){
+    review_box[i].addEventListener("click",function(e){
+        let num = e.currentTarget.dataset.idx
+        review_popup.style.display="block"
+        block_pan.style.display="block"
+        
+        for(let i=0; i<put_value.length - 1; i++){
+            pop_img_box.style.background=`url(../img/recommend/${reivew_arr[num][0]}) no-repeat center center / cover`
+            put_value[i+1].textContent=`${reivew_arr[num][i+1]}`
+        }
+        
+        console.log(num)
+
+        
+    })
+}
+
+pop_close_btn.addEventListener("click", function(){
+        review_popup.style.display="none"
+        block_pan.style.display="none"
+})
+

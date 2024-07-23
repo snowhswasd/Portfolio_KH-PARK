@@ -300,7 +300,7 @@
     box-sizing: border-box;
     overflow-x: scroll;
 }
-/* 커스텀 */
+/*스크롤 커스텀 */
 .sit_box_outer::-webkit-scrollbar, 
 textarea::-webkit-scrollbar{
     height: 10px;

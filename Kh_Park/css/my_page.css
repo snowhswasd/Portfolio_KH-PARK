@@ -140,6 +140,7 @@ footer{
     transform: translateX(-50%);
     z-index: 600;
 }
+
 .popup_logo_box{
     text-align: center;
 }
@@ -373,33 +374,32 @@ textarea::-webkit-scrollbar-track{
 
 
 /* 후기작성 팝업 */
+
 .swiper {
-    width: 240px;
-}
+    width: 100%;
+    height: 100%;
+  }
 .swiper-slide {
     text-align: center;
+    font-size: 22px;
+    font-weight: bold;
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    font-size: 22px;
-    font-weight: bold;
     color: black;
-
     border: 2px solid rgb(72, 91, 166);
     box-sizing: border-box;
 }
 div .swiper-pagination{
     position: absolute;
-    top: -21px;
+    bottom: 100%;
     left: 0;
-    font-size: 13px;
-    font-weight: 600;
+    font-weight: bold;
+    font-size: 15px;
 }
-.swiper_btn{
-    display: none;
-}
+
+
 .poster_img_box{
     margin: auto;
     margin-top: 10px;
@@ -482,7 +482,7 @@ input[type="range"]{
     left: 0;
     margin: 0;
     z-index: 20;
-    opacity: 1;
+    opacity: 0;
 }
 .full_star,
 .zero_star{
@@ -513,7 +513,9 @@ input[type="range"]{
     border: none;
     color: white;
 }
-
+.none_reset{
+    display: none;
+}
 
 
 
@@ -562,6 +564,14 @@ div .delete_btn{
 }
 
 @media screen and (max-width:1024px) {
+    /* 스와이퍼 버튼 안보이게 */
+    div .swiper_btn{
+        display: none;
+    }
+    /* 팝업 높이 */
+    .popup{
+        top: 100px;
+    }
     .sec{
         margin-top: 60px;
         padding: 0px 10px;
@@ -607,6 +617,7 @@ div .delete_btn{
 }
 
 @media screen and (max-width:480px) {
+        
     /* 팝업창 공통*/
     .popup_1,
     .popup_2,
@@ -615,6 +626,9 @@ div .delete_btn{
     .popup_5,
     .popup_6{
         width: 260px;
+    }
+    .popup{
+        top: 50px;
     }
     .error_msg,
     .input_error_msg,

@@ -302,7 +302,16 @@ for(let i=0; i<data_arr.length; i++){
 }
 
 // 후기 작성 팝업
-var swiper = new Swiper(".mySwiper", {});
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
 let swiper_wrapper = document.getElementsByClassName("swiper-wrapper")[0]
 
@@ -340,7 +349,7 @@ for(let i=0; i<data_arr.length; i++){
                                 <div class="zero_star"></div>
                             </div>
                         </div>
-                        <input type="range"  min="1" max="5" step="1" value="1" class="star_scroll" onchange="star_num()"  data-num="${i}">
+                        <input type="range"  min="1" max="5" step="1" value="1" class="star_scroll" data-num="${i}">
                     </div>
                 </div>
                 <div class="review_box">
@@ -355,6 +364,7 @@ for(let i=0; i<data_arr.length; i++){
                 </div>
             </div>
             <input type="submit" value="등록하기" class="review_submit_btn">
+            <input type="reset" class="none_reset" value="초기화">     
         </form>
     </div>
     `
@@ -362,54 +372,41 @@ for(let i=0; i<data_arr.length; i++){
 
 
 
-/* 
-0일때 0~4
-1일때 5~8
-2일때 9~12
-
-0
-*/
+// 총 스크롤 갯수
+let star_scroll = document.getElementsByClassName("star_scroll")
 
 
 let full_star = document.getElementsByClassName("full_star")
 let zero_star = document.getElementsByClassName("zero_star")
 
-// let swiper_slide = document.getElementsByClassName("swiper-slide")
-// for(let i=0; i<swiper_slide.length; i++){
-//     let star_scroll = document.getElementsByClassName("star_scroll")
-//     let in_star = star_scroll[i].getElementsByClassName("full_star")
-    
-//     star_scroll[i].addEventListener("change", function(e){
-//         console.log(e.target.dataset.num)
-//         console.log(in_star[i].length)
-
-//     })
-// }
 
 let swiper_slide = document.getElementsByClassName("swiper-slide")
 for(let i=0; i<swiper_slide.length; i++){
-    let star_scroll = document.getElementsByClassName("star_scroll")
-    let in_star = star_scroll[i].getElementsByClassName("full_star")
-    
-    star_scroll[i].addEventListener("change", function(e){
-        console.log(e.target.dataset.num)
-        console.log(in_star[i].length)
+        star_scroll[i].addEventListener("change", function(e){
+            let current_num = Number(e.target.dataset.num)
+            // console.log("현재 데이터 값: "+current_num)
+            // console.log("현재 input 값 : "+e.target.value)
+            // console.log("")
+            
+            for(let j=(current_num * 5); j<((current_num * 5) + 5); j++){
+                full_star[j].style.display = "none";
+            }
+            // 
+            // 0번째 일때 (let k=0; k<0+5; k++)
+            // 1번째 일때 (let k=5; k<5+5; k++)
+            // 2번째 일때 (let k=10; k<10+5; k++)
+            for(let k=(current_num * 5); k<((current_num * 5 ) + Number(e.target.value)) ; k++){       
+                full_star[k].style.display = "block";
 
+              
+            }
+            console.log("현재 데이터 값: "+current_num)
+            console.log("현재 ㅏ 값: "+ (current_num * 5))
+            console.log("마지막 K 값 : "+((current_num * 5 )+ Number(e.target.value)))
+            console.log("")
     })
 }
 
-
-
-
-function star_num(){
-    // for (let i = 0; i < 5; i++) {
-    //     if (star_scroll.value > i) {
-    //         full_star[i].style.display = "block";
-    //     } else {
-    //         full_star[i].style.display = "none";
-    //     }
-    // }
-}
 
 // 리뷰 유효성 검사
 let review_title = document.getElementsByClassName("review_title")
@@ -450,6 +447,25 @@ for(let i=0; i<review_submit_btn.length; i++){
         }
     })
 }
+
+// 닫았을때 range 초기화,별점 1점 시작
+let review_close_btn = document.getElementsByClassName("review_close_btn")[0]
+let none_reset = document.getElementsByClassName("none_reset")
+review_close_btn.addEventListener("click",function(){
+    for(let i=0; i<none_reset.length; i++){
+        none_reset[i].click();
+    }
+
+    for(let i=0; i< full_star.length; i++){
+        full_star[i].style.display="none"
+    }
+
+    for(let i=0; i<swiper_slide.length; i++){
+        full_star[i*5].style.display="block"
+    }
+})
+
+
 // 회원 탈퇴 팝업
 let delete_confirm_input = document.getElementsByClassName("delete_confirm_input")[0]
 let delete_btn = document.getElementsByClassName("delete_btn")[0]

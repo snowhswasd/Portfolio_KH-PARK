@@ -56,8 +56,8 @@ a{
     box-sizing: border-box;
     border-radius: 5px;
     border: 2px solid rgb(72, 91, 166);
-    padding: 9px 0px 7px 8px;
-    font-size: 13px;
+    padding: 1px 3px;
+    font-size: 15px;
     font-weight: 600;
 }
 .question_box{
@@ -74,7 +74,8 @@ a{
 .popup_input_box input:focus{
     outline: 1px solid rgb(72, 91, 166);
 }
-.submit_btn_id{
+.submit_btn_id,
+.close_btn{
     background-color: rgb(72, 91, 166);
     width: 100%;
     height: 30px;
@@ -83,6 +84,12 @@ a{
     color: white;
     font-size: 17px;
     font-weight: 600;
+}
+.close_btn{
+    margin-top: 5px;
+}
+.close_btn:hover{
+    cursor: pointer;
 }
 .find_info_box{
     margin: auto;
@@ -105,17 +112,7 @@ a{
     color: red;
     text-align: center;
     margin: 0px 0px 5px 0px;
-}
-.close_btn{
-    background-color: rgb(72, 91, 166);
-    width: 100%;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 17px;
-    font-weight: 600;
-    margin-top: 5px;
+    display: none;
 }
 
 
@@ -383,6 +380,7 @@ footer{
         margin-top: 10px;
     }
     .form_logo{
-        font-size: 50px;
+        margin-top: 10px;
+        font-size: 40px;
     }
 }

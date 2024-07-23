@@ -32,7 +32,7 @@ for(let i=0; i<20; i++){
     sec_main.innerHTML +=`
         <div class="show_box">
             <div class="img_box">
-                <a href="#">
+                <a href="./ticketing_page.html">
                     <img src="../img/all_poster/${data_arr[i][0]}" alt="공연 포스터" class="poster_img">
                 </a>
             </div>
@@ -41,8 +41,7 @@ for(let i=0; i<20; i++){
                 <span class="show_area">${data_arr[i][2]}</span>
                 <span class="show_date">${data_arr[i][3]}</span>
             </div>
-        </div>
-    `
+        </div>`
 }
 
 let add_show_btn = document.getElementsByClassName("add_show_btn")[0]
