@@ -202,22 +202,7 @@ for(let i=0; i<find_opt.length; i++){
     console.log("길이는: "+find_opt.length)
     find_opt[i].addEventListener("click",function(){
         find_opt_box.style.display="none"
-        if(i == 0){
-            update_box_outer[0].style.display="block"
-            console.log("000")
-        }
-        else if(i == 1){
-            update_box_outer[1].style.display="block"
-            console.log(111)
-        }
-        else if(i == 2){
-            update_box_outer[2].style.display="block"
-            console.log(222)
-        }
-        else{
-            update_box_outer[3].style.display="block"
-            console.log(333)
-        }
+        update_box_outer[i].style.display="block"
     })
 }
 
@@ -401,8 +386,8 @@ for(let i=0; i<swiper_slide.length; i++){
               
             }
             console.log("현재 데이터 값: "+current_num)
-            console.log("현재 ㅏ 값: "+ (current_num * 5))
-            console.log("마지막 K 값 : "+((current_num * 5 )+ Number(e.target.value)))
+            console.log("현재 k 값: "+ (current_num * 5))
+            console.log("마지막 k 값 : "+((current_num * 5 )+ Number(e.target.value)))
             console.log("")
     })
 }
@@ -537,6 +522,10 @@ for(let i=0; i<prev_btn_update.length; i++){
 for(let i=0; i<off_close_btn.length; i++){
     off_close_btn[i].addEventListener("click", function(){
         // 정보수정 닫았다가 다시 열때 초기화
+        for(let j=0; j<error_msg.length; j++){
+            error_msg[j].textContent=""
+        }
+
         find_opt_box.style.display="block"
         update_box_outer[i].style.display="none"
         popup[0].style.display="none"

@@ -35,34 +35,14 @@ var swiper = new Swiper(".mySwiper", {
     pagination: {
         el: ".swiper-pagination",
         clickable: true,
-    },
+    }
 });
 
 // 미니 배너 넣어주기
-    for(let i=0; i<m_banner_arr.length; i++){    
-        swiper_bullet[i].innerHTML +=
-        `<img src="../img/main_banner_mini/${m_banner_arr[i][1]}" alt="메인배너_미니_${i}">`
-    
-    }
-
-function bullet(){
-    let w_width = window.innerWidth
-    if(w_width >= 1024){
-        for(let i=0; i<swiper_bullet.length; i++){
-            swiper_bullet[i].style.display = "inline-block"
-        }
-    }
-    else{
-        for(let i=0; i<swiper_bullet.length; i++){
-            swiper_bullet[i].style.display = "none"
-        }
-    }
-    // swiper.autoplay.stop()
-    // swiper.autoplay.start()
+for(let i=0; i<m_banner_arr.length; i++){    
+    swiper_bullet[i].innerHTML +=
+    `<img src="../img/main_banner_mini/${m_banner_arr[i][1]}" alt="메인배너_미니_${i}">`
 }
-
-window.addEventListener("resize", bullet)
-window.addEventListener("load", bullet)
 
 
 // 임시 데이터

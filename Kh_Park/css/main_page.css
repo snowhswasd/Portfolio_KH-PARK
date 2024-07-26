@@ -606,6 +606,9 @@ object{
         padding-top: 70px;
     }
     /* sec1 반응형 */
+    .swiper-pagination{
+        display: none;
+    }
     .sec_1{
         max-width: 650px;
         margin: auto;
