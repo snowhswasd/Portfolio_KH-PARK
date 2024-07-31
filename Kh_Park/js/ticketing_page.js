@@ -309,8 +309,8 @@ if (day < 10) {
 }
 
 // 날짜 값 넣기 && 제한 하기
-date_input.value = `${year}-${month}-${day+1}`
-date_input.min = `${year}-${month}-${day+1}`
+date_input.value = `${year}-${month}-${day}`
+date_input.min = `${year}-${month}-${day}`
 
 
 
