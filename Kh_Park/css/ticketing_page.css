@@ -76,7 +76,6 @@
 .show_img{
     width: 300px;
     height: 400px;
-    background: url(../img/musical/musical_1.gif) no-repeat center center / cover;
     border-radius: 10px;
 }
 .show_txt{
@@ -105,7 +104,10 @@
 .price_num{
     font-weight: 600;
 }
-
+.info_pirce span:nth-child(3){
+   
+   
+}
 /* 설명서 */
 .show_manual_box{
     width: 67%;
@@ -137,6 +139,9 @@
     height: 60px;
     line-height: 60px;
 }
+.manual_txt:hover{
+    cursor: pointer;
+}
 .m_pan{
     width: 100%;
     display: none;
@@ -149,13 +154,18 @@
     width: 100%;
 }
 .show_info_pan .m_img_box:nth-child(1){
-    background: url(../img/manual/manual_1.jpg) no-repeat center center / cover;
-    padding-bottom: 250%;
+    background: url(../img/manual/manual1.jpg) no-repeat center center / cover;
+    padding-bottom: 398%;
 }
 .show_info_pan .m_img_box:nth-child(2){
     margin-top: 20px;
-    background: url(../img/manual/manual_2.jpg) no-repeat center center / cover;
-    padding-bottom: 223%;
+    background: url(../img/manual/manual2.jpg) no-repeat center center / cover;
+    padding-bottom: 321%;
+}
+.show_info_pan .m_img_box:nth-child(3){
+    margin-top: 20px;
+    background: url(../img/manual/manual3.jpg) no-repeat center center / cover;
+    padding-bottom: 184%;
 }
 .casting_pan_inner{
     display: flex;

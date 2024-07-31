@@ -7,7 +7,7 @@ let info_fn_arr =[
     ["포인트 충전","cash.png","포인트를 충전합니다."],
     ["예매 내역","tickting.png","예매 내역을 확인합니다."],
     ["후기작성","review.png","후기를 작성합니다."],
-    ["???","review.png","???를 합니다"],
+    // ["???","review.png","???를 합니다"],
     ["회원탈퇴", "delete.png","회원을 탈퇴합니다"]
 ]
 
@@ -382,8 +382,6 @@ for(let i=0; i<swiper_slide.length; i++){
             // 2번째 일때 (let k=10; k<10+5; k++)
             for(let k=(current_num * 5); k<((current_num * 5 ) + Number(e.target.value)) ; k++){       
                 full_star[k].style.display = "block";
-
-              
             }
             console.log("현재 데이터 값: "+current_num)
             console.log("현재 k 값: "+ (current_num * 5))
@@ -455,7 +453,7 @@ review_close_btn.addEventListener("click",function(){
 let delete_confirm_input = document.getElementsByClassName("delete_confirm_input")[0]
 let delete_btn = document.getElementsByClassName("delete_btn")[0]
 let delete_cofirm = false
-
+let popup_6 = document.getElementsByClassName("popup_6")[0]
 delete_confirm_input.addEventListener("keyup", function(){
     let delete_txt_value = delete_confirm_input.value 
 
@@ -474,6 +472,8 @@ delete_btn.addEventListener("click", function(e){
     }
     else{
         alert("회원탈퇴가 완료되었습니다.")
+        popup_6.style.display="none"
+        block_pan.style.display="none"
     }
     
 })

@@ -103,6 +103,7 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    padding-bottom: 5px;
 }
 .show_title{
     font-size: 18px;
@@ -116,24 +117,16 @@
     font-size: 15px;
     color: gray;
 }
-
-/* 더 보기 버튼 */
-.add_show_btn{
-    margin: auto;
-    margin-top: 40px;
-    width: 150px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    background-color: #8e43e7;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
+.show_title,
+.show_area,
+.show_date{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical
 }
-.add_show_btn:hover{
-    cursor: pointer;
-}
-
 
 @media screen and (max-width:1024px) {
     /* 반응형 때 아이콘 */
@@ -173,14 +166,6 @@
     }
     .show_date{
         font-size: 1.4vw;
-    }
-
-    /* 더보기 버튼 */
-    .add_show_btn{
-        width: 90px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 13px;
     }
 }
 @media screen and (max-width:768px) {

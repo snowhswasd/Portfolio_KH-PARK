@@ -158,6 +158,7 @@
     right: 150%;
     font-size: 52px;
     color: white;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 1);
 }
 .num_pos_9{
     top: 72%;
@@ -236,7 +237,7 @@
     width: 100%;
     padding-bottom: 75%;
 }
-object{
+iframe{
     position: absolute;
     top: 0;
     left: 0;
@@ -479,10 +480,12 @@ object{
     font-size: 15px;
 }
 /* 커스텀 */
+.pop_scroll_box::-webkit-scrollbar,
 .pop_txt_box p:nth-child(3)::-webkit-scrollbar, 
 textarea::-webkit-scrollbar{
     width: 7px;
 }
+.pop_scroll_box::-webkit-scrollbar-thumb,
 .pop_txt_box p:nth-child(3)::-webkit-scrollbar-thumb,
 textarea::-webkit-scrollbar-thumb {
     background: rgb(72, 91, 166);
@@ -523,6 +526,7 @@ textarea::-webkit-scrollbar-track{
     padding: 5px 10px;
     border: 1px solid gray;
     border-radius: 15px;
+    font-size: 13px;
     font-weight: 600;
 }   
 .genre_opt:hover,
@@ -582,7 +586,7 @@ div .kh_btn_L{
 .swiper-button-prev::after {
     display: none;    
 }
-object{
+iframe{
     pointer-events:none;
 }
 .drop{
