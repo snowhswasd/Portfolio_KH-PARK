@@ -299,7 +299,7 @@ date_input.addEventListener("change", function(){
 let today = new Date();
 let year = today.getFullYear();
 let month = today.getMonth() + 1;
-let day = today.getDate();
+let day = today.getDate() + 1;
 
 if (month < 10) {
     month = '0' + month;
