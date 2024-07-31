@@ -151,18 +151,20 @@
 }
 .pos_box{
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 .num_pos{
     position: absolute;
-    top: 72%;
-    right: 150%;
+    top: 71%;
+    left: 10px;
     font-size: 52px;
     color: white;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 1);
 }
 .num_pos_9{
-    top: 72%;
-    right: 135%;
+    top: 71%;
+    left: 10px;
 }
 
 .sec_4{
