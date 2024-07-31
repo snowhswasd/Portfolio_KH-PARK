@@ -280,7 +280,7 @@ let cate_arr = [
 for(let i=0; i<swiper_rank.length; i++){
     for(let j=0; j<data_arr[i].length; j++){
         swiper_rank[i].innerHTML+=`
-        <div class="swiper-slide rank_slide pos_box">
+        <div class="swiper-slide rank_slide">
             <a href="./ticketing_page.html?cate=${cate_arr[i]}&idx=${j}&cateNo=${i}" class="pos_box">
                 <img src="../img/${cate_arr[i]}/${data_arr[i][j][0]}" alt="공연정보${j}" class="slide_img">
                 <span class="num_pos num_pos_${j}">${j+1}<span>
