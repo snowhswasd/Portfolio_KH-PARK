@@ -466,9 +466,6 @@ function sticky_height () {
         let h2 = show_manual_box.offsetHeight+20
         console.log(h1)
         console.log(h2)
-
-        pos_box.style.height=`0px`;
-        show_box_outer.style.height=`0px`;
     
         pos_box.style.height=`${h1 + h2}px`;
         show_box_outer.style.height=`${h1 + h2}px`;
