@@ -26,3 +26,11 @@ for(let i=0; i<top_btn.length; i++){
         window.scrollTo({top:0, left:0, behavior:'smooth'});
     })
 }
+
+// 검색 막아두기
+let h_search_box = document.getElementsByClassName("h_search_box")[0]
+
+h_search_box.addEventListener("click", function(e){
+    alert("검색기능은 추후 업데이트 예정입니다.")
+})
+
