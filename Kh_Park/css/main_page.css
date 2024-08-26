@@ -166,6 +166,29 @@
     top: 71%;
     left: 10px;
 }
+.link_box{
+    text-align: center;
+    margin-top: 20px;
+}
+.link_btn{
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: #8e43e7;
+    color: white;
+    padding: 5px 10px;
+}
+
+.link_box{
+    margin-top: 20px;
+}
+.link_btn{
+    font-size: 17px;
+    padding: 5px 10px;
+}
+
+
+
 
 .sec_4{
     max-width: 1280px;
@@ -736,6 +759,14 @@ iframe{
     .recommend_keyword{
         gap: 10px;
     }
+    .link_box{
+        margin-top: 15px;
+    }
+    .link_btn{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+
 
     /* 중간배너 */
     .ad_box{
@@ -859,13 +890,21 @@ iframe{
     .recommend_keyword{
         gap: 5px;
     }
+    .link_box{
+        margin: 10px 0px 25px 0px;
+    }
+    .link_btn{
+        font-size: 3vw;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
     /* 중간 배너 */
     .ad_box_link{
         width: calc((100%)/1);
         padding-bottom: 25%;
     }
    /* 티켓오픈 */
-   .open_ticket_box{
+    .open_ticket_box{
     width: calc((100% - (10px*0) )/1);
     }
     .open_txt span:nth-child(1){
