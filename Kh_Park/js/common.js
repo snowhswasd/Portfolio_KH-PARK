@@ -31,6 +31,6 @@ for(let i=0; i<top_btn.length; i++){
 let h_search_box = document.getElementsByClassName("h_search_box")[0]
 
 h_search_box.addEventListener("click", function(e){
+    e.preventDefault()
     alert("검색기능은 추후 업데이트 예정입니다.")
 })
-
